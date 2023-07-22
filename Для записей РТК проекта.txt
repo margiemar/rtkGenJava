@@ -1,0 +1,13 @@
+В коде приложения тоже не следует для "денег" использовать типы с плавающей запятой, такие как float или double.
+В разных языках программирования для этих целей используются различные типы в той или иной степени эквивалентные numeric, например decimal в java. 
+ NUMERIC(15,6) - числа с фиксированнной точкой.
+ 
+ 
+CREATE TABLE IF NOT EXISTS test.rrr
+  (
+    id bigint,
+    ff bigint GENERATED ALWAYS AS (id + 10) STORED
+  )
+  
+BigDecimal modelVal = new BigDecimal("24.455");
+BigDecimal displayVal = modelVal.setScale(2, RoundingMode.HALF_EVEN);

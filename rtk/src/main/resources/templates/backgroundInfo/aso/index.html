@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог АСО</title>
+</head>
+<body>
+<h1>КАТАЛОГ АСО</h1>
+<div th:each="device : ${aso}">
+    <a th:href="@{/aso/{id}(id=${device.getId()})}"
+       th:text="${device.getNomenclatureNum + ', ' + device.getProductName()}">user</a>
+</div>
+
+<br/>
+<hr/>
+
+<a href="/aso/new">Добавить АСО</a>
+</body>
+</html>
