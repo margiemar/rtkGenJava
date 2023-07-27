@@ -1,9 +1,10 @@
 package com.march.rtk.models;
 
 import jakarta.persistence.*;
+//import javax.validation.constraints.NotBlank;
 
 @Entity
-@Table(name="RateFRS")
+@Table(name="rate_frs")
 public class RateFRS {
 
     @Id
@@ -11,18 +12,19 @@ public class RateFRS {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+
     @Column(name = "name_frs")
-    private String name_frs;
+    private String nameFRS;
 
     @Column(name = "service_work_hours_rate")
-    private String service_work_hours_rate;
+    private String serviceWorkHoursRate;
 
     // Конструктор по умолчанию нужен для Spring
     public RateFRS() {}
 
-    public RateFRS(String name_frs, String service_work_hours_rate) {
-        this.name_frs = name_frs;
-        this.service_work_hours_rate = service_work_hours_rate;
+    public RateFRS(String nameFRS, String serviceWorkHoursRate) {
+        this.nameFRS = nameFRS;
+        this.serviceWorkHoursRate = serviceWorkHoursRate;
     }
 
     public int getId() {
@@ -33,19 +35,19 @@ public class RateFRS {
         this.id = id;
     }
 
-    public String getName_frs() {
-        return name_frs;
+    public String getnameFRS() {
+        return nameFRS;
     }
 
-    public void setName_frs(String name_frs) {
-        this.name_frs = name_frs;
+    public void setnameFRS(String nameFRS) {
+        this.nameFRS = nameFRS;
     }
 
-    public String getService_work_hours_rate() {
-        return service_work_hours_rate;
+    public String getserviceWorkHoursRate() {
+        return serviceWorkHoursRate;
     }
 
-    public void setService_work_hours_rate(String service_work_hours_rate) {
-        this.service_work_hours_rate = service_work_hours_rate;
+    public void setserviceWorkHoursRate(String serviceWorkHoursRate) {
+        this.serviceWorkHoursRate = serviceWorkHoursRate;
     }
 }

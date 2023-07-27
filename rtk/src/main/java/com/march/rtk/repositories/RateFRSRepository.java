@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RateFRSRepository extends JpaRepository <RateFRS, Integer> {
+
+    //Cpecific only
+    //void  calcOverTime(int id);
 }

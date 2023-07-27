@@ -27,7 +27,7 @@ public class ASO {
         this.price = new BigDecimal(price);
     }
 
-    public ASO() {}
+    public ASO(int id, long nomenclature_name, String product_name, BigDecimal price) {}
 
     public int getId() {
         return id;
@@ -49,8 +49,8 @@ public class ASO {
         return productName;
     }
 
-    public void setProductName(String product_name) {
-        this.productName = product_name;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     public BigDecimal getPrice() {

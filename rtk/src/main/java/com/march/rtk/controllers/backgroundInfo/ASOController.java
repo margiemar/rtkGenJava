@@ -30,4 +30,11 @@ public class ASOController {
     public String newASO(@ModelAttribute("aso") ASO aso) {
         return "backgroundInfo/catalogASO/new";
     }
+
+
+    @GetMapping("/test")
+    public String test(){
+        System.out.println(asoService.testGet());
+        return "backgroundInfo/aso/index";
+    }
 }

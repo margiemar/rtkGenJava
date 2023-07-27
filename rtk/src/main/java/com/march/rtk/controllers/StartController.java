@@ -11,6 +11,6 @@ public class StartController {
     @GetMapping("")
     public String add(){
 
-        return "index.html";
+        return "mainpage.html";
     }
 }
